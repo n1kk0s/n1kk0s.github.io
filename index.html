@@ -3,19 +3,74 @@
 <head>
   <title>Nick Weld</title>
   <link rel='stylesheet' type='text/css' href='styles.css'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  <p>
-    <h2>Sorry about the mess...</h2>
-    I'm currently working on a redesign for this site, so check back to see if something new and shiny pops up!
-  </p>
-  <p>
-    <h4>Looking for one of my sites hosted through GitHub?</h4>
-    <ul>
-      <li><a href='/NewSuper322'>Super 322 Drive-In</a></li>
-      <li><a href='/411Project'>IST 411 Project Plan</a></li>
-      <li><a href='/IST250'>IST 250 Final Project</a></li>
-    </ul>
-  </p>
+
+  <div class='header'>
+    <img class='myPicture' src='images/me.png'>
+    <h4><em>Web Developer | Programmer | IT Specialist</em></h4>
+    <div class='nav'>
+      <a href='#about'>About</a>
+      <a href='#projects'>Projects</a>
+      <a href='#contact'>Contact</a>
+    </div>
+  </div>
+
+  <div class='about' id='about'>
+    <h2>About</h2>
+    <div class='aboutGroup'>
+      <div class='aboutCard'>
+        <h3>Education</h3>
+        <h4>Penn State University</h4>
+        <p>
+          Bachelor of Science: Information Sciences and Technology<br>
+          Focus: Software Design and Development<br>
+          Overall GPA: 3.3; Major GPA: 3.8
+        </p>
+      </div>
+      <div class='aboutCard'>
+        <h3>Experience</h3>
+        <h4>Penn State Applied Research Lab</h4>
+      </div>
+      <div class='aboutCard'>
+        <h3>Skills</h3>
+        <p>JAVA • HTML • CSS • PHP • SQL • Git/Github • C++ • Windows 10 • Android • JavaScript • Bootstrap</p>
+      </div>
+    </div>
+  </div>
+
+  <div class='projects' id='projects'>
+    <h2>Projects</h2>
+    <p>These are just a few of my nicer projects, if you want to see some more experimental projects, check out my <a href='https://www.github.com/n1kk0s' target='_blank'>GitHub</a>!</p>
+    <div class='projectsGroup'>
+      <div class='projectsCard'>
+
+      </div>
+    </div>
+  </div>
+
+  <div class='contact' id='contact'>
+    <h2>Contact</h2>
+    <div class='contactGroup'>
+      <div class='contactCard'>
+        <h4>Nick Weld</h4>
+        <h4>(814) 762-3553 | State College, PA</h4>
+      </div>
+      <div class='contactCard'>
+        <form>
+          <input type='text' name='email' placeholder='Email' required><br>
+          <textarea name='message' placeholder='Talk to me!' required></textarea><br>
+          <input type='submit' name='submit' value='Sumbit'>
+        </form>
+      </div>
+      <div class='contactCard'>
+        <h4>Links</h4>
+        <a href='' target='_blank'>GitHub</a>
+        <a href='' target='_blank'>LinkedIn</a>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
