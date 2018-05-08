@@ -1,12 +1,50 @@
 body {
 	margin: 0 auto;
-	color: #555;
+	background-image: url('images/weather.png');
+	background-repeat: repeat;
+	background-position: top;
+	background-attachment: scroll;
 	line-height: 1.5;
 }
 
-h2 {
+.header {
+	text-align: center;
 }
 
-h1, h2, strong {
-	color: #333;
+.nav {
+	background-color: inherit;
+	margin: 0 auto;
+}
+
+.nav a {
+	text-decoration: none;
+	color: white;
+	margin: 0 auto;
+}
+
+.myPicture {
+	padding-top: 1.2rem;
+	width: 30%;
+	height: auto;
+}
+
+.section {
+	padding: 0 1rem 2rem 1rem;
+}
+
+.aboutCard {
+	background-color: #f9f9f9;
+	padding: 0 0.5rem;
+	border-radius: 5px;
+	margin-bottom: 1rem;
+
+	box-shadow: 0px 2px 10px lightblue;
+}
+
+.projectsCard {
+	border: solid 1px black;
+}
+
+.contactCard {
+	border: solid 1px black;
 }
