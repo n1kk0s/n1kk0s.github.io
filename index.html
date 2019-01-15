@@ -1,77 +1,109 @@
-<DOCTYPE! html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <title>Nick Weld</title>
-  <link rel='stylesheet' type='text/css' href='styles.css'>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href='styles.css'>
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </head>
-<body>
 
-  <div class='header'>
-    <img class='myPicture' src='images/me.png'>
-    <h3>Nick Weld</h3>
-    <h4><em>Web Developer | Programmer | IT Specialist</em></h4>
-    <div class='nav'>
-      <a href='#about'>About</a>
-      <a href='#projects'>Projects</a>
-      <a href='#contact'>Contact</a>
+<body id="content" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#content">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#content">HOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#education">EDUCATION</a></li>
+        <li><a href="#skills">SKILLS</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
     </div>
   </div>
+</nav>
 
-  <div class='section' id='about'>
-    <h2>About</h2>
-    <div class='aboutGroup'>
-      <div class='aboutCard'>
-        <h3>Education</h3>
-        <h4>Penn State University</h4>
-        <p>
-          Bachelor of Science: Information Sciences and Technology<br>
-          Focus: Software Design and Development<br>
-          Overall GPA: 3.3; Major GPA: 3.8
-        </p>
-      </div>
-      <div class='aboutCard'>
-        <h3>Experience</h3>
-        <h4>Penn State Applied Research Lab</h4>
-      </div>
-      <div class='aboutCard'>
-        <h3>Skills</h3>
-        <p>JAVA • HTML • CSS • PHP • SQL • Git/Github • C++ • Windows 10 • Android • JavaScript • Bootstrap</p>
-      </div>
-    </div>
-  </div>
+<div id="myCarousel" class="carousel slide" data-ride="carousel"> <!-- Update this with my header image -->
 
-  <div class='section' id='projects'>
-    <h2>Projects</h2>
-    <p>These are just a few of my nicer projects, if you want to see some more experimental projects, check out my <a href='https://www.github.com/n1kk0s' target='_blank'>GitHub</a>!</p>
-    <div class='projectsGroup'>
-      <div class='projectsCard'>
+</div>
 
-      </div>
-    </div>
-  </div>
+<!-- ABOUT section -->
+<div id="about" class="container text-center">
+  <h3>ABOUT</h3>
+  <p><em>“To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.”</em></p>
+  <p>Put ABOUT ME text here!</p>
+</div>
 
-  <div class='section' id='contact'>
-    <h2>Contact</h2>
-    <div class='contactGroup'>
-      <div class='contactCard'>
-        <h4>Nick Weld</h4>
-        <h4>(814) 762-3553 | State College, PA</h4>
-      </div>
-      <div class='contactCard'>
-        <form>
-          <input type='text' name='email' placeholder='Email' required><br>
-          <textarea name='message' placeholder='Talk to me!' required></textarea><br>
-          <input type='submit' name='submit' value='Sumbit'>
-        </form>
-      </div>
-      <div class='contactCard'>
-        <h4>Links</h4>
-        <a href='https://github.com/n1kk0s' target='_blank'>GitHub</a>
-        <a href='https://www.linkedin.com/in/nicholasweld/' target='_blank'>LinkedIn</a>
-      </div>
-    </div>
-  </div>
+<!-- EDUCATION section -->
+<div id="education" class="bg-1">
+  <h3 class="text-center">EDUCATION</h3>
+
+</div>
+
+<!-- SKILLS section -->
+<div id="skills" class="container">
+  <h3 class="text-center">SKILLS</h3>
+
+</div>
+
+<!-- CONTACT section -->
+<div id="contact" class="container">
+  <h3 class="text-center">CONTACT</h3>
+
+</div>
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="#content" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br><br>
+  <p>Made with Bootstrap | nickweld.com</a></p>
+</footer>
+
+<script> // Script found online: w3schools.com
+$(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip();
+
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#content']").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
 
 </body>
 </html>
